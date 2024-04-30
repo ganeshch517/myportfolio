@@ -1,0 +1,143 @@
+<div class="container-fluid">
+<div class="fullscreen-background" id="backgroundImageId">
+    <div class="centered-content">
+        <div id="name-title">GANESH CHEEPURI</div>
+        <button type="button" class="btn btn-warning"><i class="fa-solid fa-download"></i> &nbsp; Download Resume</button>
+    </div>
+</div>
+
+
+<h3 id="projectsTitleId">PROJECTS</h3>
+<div class="row initial-row" id="projectsDivId">
+
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="fade-right">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ganesh</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a class="btn btn-primary" (click)="displayProjectDetails()">Go somewhere</a>
+            </div>
+        </div> 
+        
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="flip-up">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">prasad</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="fade-left">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="fade-right">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="flip-up">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+        
+        <div class="card" data-aos="fade-left">
+            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+    </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="about">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 col-md-12">
+          About me
+      </div>
+      <div class="col-lg-6 col-sm-12 col-md-12">
+        <img class="profile-picture" src="../../../assets/Ganesh image.jpg" alt="Ganesh's image">
+      </div>
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="container" id="contactForm">
+  <h2 class="text-center mb-5">Contact Me</h2>
+  <div class="row">
+  <div class="col-md-6 offset-md-3">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Your good name..." formControlName="name">
+      </mat-form-field>
+      <div class="invalidMessage" *ngIf="contactForm.controls['name'].touched && contactForm.controls['name'].errors">Please enter your name</div>
+    </div>
+  
+    <div class="form-group">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter your Email..." formControlName="email">
+      </mat-form-field>
+      <div class="invalidMessage" *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors">Please enter a valid Email</div>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Send some message to Ganesh..." formControlName="message"></textarea>
+      </mat-form-field>
+      <div class="invalidMessage" *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].errors">Please enter some message you want to send</div>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- <button class="btn btn-primary" (click)="showSuccess()">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+      <button type="reset" id="reset" class="btn btn-warning" (click)="contactForm.reset()">Reset</button>
+    </div>
+
+  </form>
+
+  </div>
+  </div>
+  </div>
+
+
+
+</div>

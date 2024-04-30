@@ -1,0 +1,40 @@
+#navbaritems {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    margin-right: 200px;
+}
+
+#navbaritems a {
+    border-bottom: 2px solid transparent;
+    margin-right: 50px;
+}
+
+#navbaritems a:hover {
+    cursor: pointer;
+    color: blueviolet;
+    border-bottom: 2px solid red;
+}
+
+a {
+    font-size: 15px;
+    list-style: none;
+    text-decoration: none;
+}
+
+#navbarId {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+
+    //for navbar background blur
+    // background: transparent;
+    // backdrop-filter: blur(10px);
+    box-shadow: 0 2px 9px -1px #160808;
+}
+
+
+
+//testing
+//.bg-light {
+    //background-color: transparent !important;
+//}
