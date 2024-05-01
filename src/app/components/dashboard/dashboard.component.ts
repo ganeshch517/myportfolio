@@ -70,4 +70,8 @@ export class DashboardComponent implements OnInit {
     this.modalService.open(PopupComponent, modalOptions);
   }
 
+  openResumeInNewTab() {
+    window.open(`https://drive.google.com/file/d/156ZjGwzUGd9WKAIeLolT2HLOmHmaUqLZ/view?usp=drive_link`, '_blank');
+  }
+
 }

@@ -1,12 +1,14 @@
 #navbaritems {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 10px;
-    margin-right: 200px;
+    position: absolute;
+    right: 10rem;
 }
 
 #navbaritems a {
     border-bottom: 2px solid transparent;
     margin-right: 50px;
+    font-weight: bold;
 }
 
 #navbaritems a:hover {
