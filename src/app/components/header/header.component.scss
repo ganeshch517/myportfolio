@@ -27,16 +27,13 @@ a {
     width: 100%;
     position: fixed;
     z-index: 99;
-
-    //for navbar background blur
-    // background: transparent;
-    // backdrop-filter: blur(10px);
     box-shadow: 0 2px 9px -1px #160808;
 }
 
-
-
-//testing
-//.bg-light {
-    //background-color: transparent !important;
-//}
+#dateTimeId {
+    color: violet;
+    font-style: italic;
+    font-family: cursive;
+    border: 1px dotted black;
+    padding: 6px;
+}

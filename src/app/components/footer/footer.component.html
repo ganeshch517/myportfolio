@@ -1,12 +1,36 @@
 <div id="footer">
-    Here is the footer
-    <span class="linkedinIcon" (click)="openLinkedInInNewTab()">
-        <i ngbTooltip="Linkedin" placement="bottom" class="fa-brands fa-linkedin fa-2xl"></i>
-    </span>
     
-    &nbsp; &nbsp;
+<div class="row">
+    <div class="col-lg-6 col-md-12-6 col-sm-12">
+    <pre class="address">
+        Gachibowli, Hyderabad 
+        Telangana, India.
+        +(91) 9912822877
+        ganeshch971@gmail.com
+    </pre>
+    </div>
+
+    <div class="col-lg-6 col-md-12-6 col-sm-12">
+        
+        <div class="smicons">
+            <span class="linkedinIcon" ngbTooltip="Linkedin" placement="bottom" (click)="openLinkedInInNewTab()">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+            </span>
+            
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            
+            <span class="naukriIcon" ngbTooltip="Naukri" placement="bottom" (click)="openNaukriInInNewTab()">
+                <i class="fa-solid fa-suitcase fa-2xl"></i>
+            </span>
+        </div>
+        <br><br>
     
-    <span class="naukriIcon" (click)="openNaukriInInNewTab()">
-        <i ngbTooltip="Naukri" placement="bottom" class="fa-solid fa-suitcase fa-2xl"></i>
-    </span>
+        <div id="copyright">
+            Copyright © {{fullYear}} | Designed and developed by Ganesh Ch ❤️
+        </div>
+
+    </div>
+</div>
+
+
 </div>

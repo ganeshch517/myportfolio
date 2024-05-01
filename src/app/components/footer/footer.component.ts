@@ -11,6 +11,7 @@ export class FooterComponent {
   
   _LINKEDIN_URL: string = `https://www.linkedin.com/in/ganeshch971/`;
   _NAUKRI_URL: string = `https://www.naukri.com/mnjuser/profile?id=&altresid`;
+  fullYear: number = new Date().getFullYear();
 
   openLinkedInInNewTab() {
     window.open(this._LINKEDIN_URL, '_blank');

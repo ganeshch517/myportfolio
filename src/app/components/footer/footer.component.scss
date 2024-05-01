@@ -11,6 +11,22 @@
     cursor: pointer;
 }
 
+.address {
+    color: white;
+}
 
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#copyright {
+    font-size: 0.875em;
+    font-family: var(--bs-font-monospace);
+}
 
+.smicons {
+    display: flex;
+    justify-content: center;
+}
