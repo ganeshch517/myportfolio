@@ -19,7 +19,17 @@
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
-    background-color: violet;
+    font-size: 24px;
+    font-style: italic;
+    padding: 10px 0px;
+}
+
+.resumeButton {
+    padding: 10px 30px !important;
+}
+
+.resumeButton:hover {
+    background-color: rgb(31, 180, 243);
 }
 
 .centered-content {
@@ -40,7 +50,14 @@
     //box-shadow: 0 1px 29px -3px rgba(0,0,0,.64);
 }
 
-.card {
+.imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.projectSection {
     width: 20rem; 
     height: 30rem;
     margin: auto;
@@ -53,13 +70,13 @@
 }
 
 .profile-picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 30rem;
-    width: 32rem;
+    width: 30rem;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid orange;
+    padding: 5px;
+    margin: 5px;
 }
 
 .onetwo {
@@ -90,4 +107,21 @@ mat-form-field {
 
 #contactForm {
     margin-top: 150px;
+}
+
+.aboutMeTitles {
+    color: orange;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-top: 2rem;
+}
+
+.aboutMeMainContainer {
+    box-shadow: 0 1px 29px -3px rgba(0, 0, 0, .64);
+}
+
+ul li {
+    text-align: justify;
+    padding-top: 10px;
 }

@@ -18,6 +18,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public scorllToHome() {
     document.getElementById('backgroundImageId')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+  
+  public scorllToAbout() {
+    document.getElementById('aboutMeId')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
 
   public scorllToContactForm() {
     document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
