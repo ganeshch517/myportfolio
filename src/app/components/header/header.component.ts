@@ -28,6 +28,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  public scorllToSkills() {
+    document.getElementById('skillsId')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   ngOnInit(): void {
     this.showCurrentDateTime();
   }
@@ -35,7 +39,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   showCurrentDateTime() {
     this.dateTimeInterval = setInterval(() => {
       let currentDate = new Date();
-      this.dateTimeString = new Intl.DateTimeFormat('en-GB', {day: '2-digit', year: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(currentDate);
+      this.dateTimeString = new Intl.DateTimeFormat('en-GB', {
+        day: '2-digit', 
+        year: 'numeric', 
+        month: 'short', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: true
+      }).format(currentDate);
     }, 1000);
   }
 

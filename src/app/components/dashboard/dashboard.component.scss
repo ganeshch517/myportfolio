@@ -18,10 +18,16 @@
 #name-title {
     text-align: center;
     margin-bottom: 10px;
-    font-weight: bold;
+    //font-weight: bold;
     font-size: 24px;
-    font-style: italic;
+    //font-style: italic;
     padding: 10px 0px;
+
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 2px 2px 5px yellow;
+  
 }
 
 .resumeButton {
@@ -121,7 +127,45 @@ mat-form-field {
     box-shadow: 0 1px 29px -3px rgba(0, 0, 0, .64);
 }
 
+#skillsTitle{
+    text-align: center;
+    color: orange;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+}
+
+#skillsId {
+    margin-top: 8rem;
+    padding: 20px;
+}
+
 ul li {
     text-align: justify;
-    padding-top: 10px;
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none!important;
+}
+
+ul {
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+}
+
+ul li:before {
+    font-family: FontAwesome;
+    content: "\f138";
+    position: absolute;
+    left : 1em;
+    color: #135772;
+}
+
+#aboutMeId ul li:before {
+    color: #a40978;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
 }
