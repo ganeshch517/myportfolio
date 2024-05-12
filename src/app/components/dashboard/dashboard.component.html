@@ -7,81 +7,23 @@
 </div>
 
 
-<h3 id="projectsTitleId">PROJECTS</h3>
+<h3 id="projectsTitleId">PORTFOLIO</h3>
 <div class="row initial-row" id="projectsDivId">
 
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet" *ngFor="let project of myProjects">
         
-        <div class="card projectSection" data-aos="fade-right">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
+        <div class="card projectSection" [attr.data-aos]="project.fadeStyle">
+            <div id="imgBlock"><img [src]="project.bannerImageURL" class="card-img-top pfBannerImage" alt="..."></div>
             <div class="card-body">
-              <h5 class="card-title">ganesh</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a class="btn btn-primary" (click)="displayProjectDetails()">Go somewhere</a>
+              <h5 class="card-title pfTitle">{{project.title}}</h5>
+              <p class="card-text projDesc" [ngbTooltip]="project.description" placement="bottom">{{project.description}}</p>
+              <a class="btn btn-primary viewBtn" (click)="displayProjectDetails(project)">VIEW</a>
+              <div><span class="techSpan">Technologies Used:</span> {{project.technologiesUsed}}</div>
             </div>
         </div> 
         
     </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
-        
-        <div class="card projectSection" data-aos="flip-up">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">prasad</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
 
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
-        
-        <div class="card projectSection" data-aos="fade-left">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
-        
-        <div class="card projectSection" data-aos="fade-right">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
-        
-        <div class="card projectSection" data-aos="flip-up">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet">
-        
-        <div class="card projectSection" data-aos="fade-left">
-            <img src="https://www4.instagantt.com/assets/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-    </div>
 </div>
 
 <!-- ABOUT SECTION -->

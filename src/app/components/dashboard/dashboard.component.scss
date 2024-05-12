@@ -3,6 +3,9 @@
 }
 
 #projectsTitleId {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
     padding-top: 80px;
     padding-left: 20px;
 }
@@ -48,6 +51,7 @@
 
 .divOutlet {
     height: 80vh;
+    margin-top: 50px !important;
     //width: 90%;
     //border: 1px solid black;
     //margin: 10px;
@@ -65,7 +69,7 @@
 
 .projectSection {
     width: 20rem; 
-    height: 30rem;
+    height: 35rem;
     margin: auto;
     //box-shadow: 3px 7px 4px 2px;
 }
@@ -124,6 +128,7 @@ mat-form-field {
 }
 
 .aboutMeMainContainer {
+    margin-top: 100px;
     box-shadow: 0 1px 29px -3px rgba(0, 0, 0, .64);
 }
 
@@ -162,10 +167,52 @@ ul li:before {
 }
 
 #aboutMeId ul li:before {
-    color: #a40978;
+    color: #5f0b47;
 }
 
 ul {
     display: table;
     margin: 0 auto;
+}
+
+#imgBlock {
+    min-height: 40%;
+    max-width: 40%;
+}
+
+#imgBlock img {
+    height: 100%;
+    width: 20rem;
+}
+
+.pfBannerImage:hover {
+    cursor: pointer;
+}
+
+.viewBtn {
+    width: 100%;
+    margin: 20px auto; 
+    color: white !important;
+}
+
+.projDesc {
+    max-height: 120px;
+    min-height: 120px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.projDesc:hover {
+    cursor: default;
+}
+
+.pfTitle {
+    font-size: 14px;
+    color: blue;
+    font-weight: bold;
+}
+
+.techSpan {
+    color: orange;
+    font-weight: bold;
 }

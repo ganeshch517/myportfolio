@@ -1,0 +1,30 @@
+<div class="container">
+
+<div class="modal-header">
+    <h4 class="modal-title projTitle">{{title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<div class="modal-body">
+<div class="row">
+
+    <div class="col-8">
+        <p class="projDesc"  [ngbTooltip]="description" placement="bottom">{{description}}</p>
+    </div>
+    <div class="col-4">
+        <img [src]="imageURL" class="projImage" alt="image failed to load...">
+    </div>
+</div>
+
+    
+    <div class="technologiesUsed">
+        <span class="technolgoiesUsed">Technologies Used:</span> {{technologiesUsed}}
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+
+ 
+</div>

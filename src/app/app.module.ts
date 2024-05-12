@@ -17,6 +17,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgTemplateOutlet } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HttpsInterceptor } from './components/interceptor/https.interceptor';
+import { ProjectDetailsPopupComponent } from './components/project-details-popup/project-details-popup.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { HttpsInterceptor } from './components/interceptor/https.interceptor';
     FooterComponent,
     PageNotFoundComponent,
     PopupComponent,
+    ProjectDetailsPopupComponent,
     //ToastComponent
   ],
   imports: [

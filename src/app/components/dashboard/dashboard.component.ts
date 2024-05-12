@@ -3,6 +3,8 @@ import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { PopupComponent } from '../popup/popup.component';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/services/email.service';
+import Projects, { IProject } from '../projects';
+import { ProjectDetailsPopupComponent } from '../project-details-popup/project-details-popup.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +14,7 @@ import { EmailService } from 'src/app/services/email.service';
 export class DashboardComponent implements OnInit {
   
   contactForm: FormGroup;
+  myProjects: IProject[] = [];
   
   constructor(private modalService: NgbModal, 
     private builder: FormBuilder,
@@ -57,17 +60,21 @@ export class DashboardComponent implements OnInit {
 	}
 
   ngOnInit(): void {
-    
+    this.myProjects = new Projects().projects;
   }
 
-  displayProjectDetails() {
+  displayProjectDetails(projectDetails: any) {
     let modalOptions: NgbModalOptions = {
       backdrop: 'static',
       keyboard: true,
       animation: true,
       windowClass: 'popupClass'
     }
-    this.modalService.open(PopupComponent, modalOptions);
+    let projectDetailsModalRef = this.modalService.open(ProjectDetailsPopupComponent, modalOptions);
+    projectDetailsModalRef.componentInstance.title = projectDetails.title;
+    projectDetailsModalRef.componentInstance.imageURL = projectDetails.bannerImageURL;
+    projectDetailsModalRef.componentInstance.description = projectDetails.description;
+    projectDetailsModalRef.componentInstance.technologiesUsed = projectDetails.technologiesUsed;
   }
 
   openResumeInNewTab() {
