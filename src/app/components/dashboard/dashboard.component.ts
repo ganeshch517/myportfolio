@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnDestroy, OnInit, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { PopupComponent } from '../popup/popup.component';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -11,11 +11,12 @@ import { ProjectDetailsPopupComponent } from '../project-details-popup/project-d
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
   
   contactForm: FormGroup;
   myProjects: IProject[] = [];
-  
+  setInterValSubscription: any;
+
   constructor(private modalService: NgbModal, 
     private builder: FormBuilder,
     private emailService: EmailService) {
@@ -28,7 +29,6 @@ export class DashboardComponent implements OnInit {
   }
 
   onSubmit(value: any) {
-    console.log(new Date().getSeconds());
     this.emailService.sendEmail(this.contactForm.value).subscribe((response: any) => {
       if(response.ok) {
         this.showPopup(true);
@@ -61,6 +61,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.myProjects = new Projects().projects;
+    this.changeMyProfilePics();
   }
 
   displayProjectDetails(projectDetails: any) {
@@ -81,4 +82,20 @@ export class DashboardComponent implements OnInit {
     window.open(`https://drive.google.com/file/d/156ZjGwzUGd9WKAIeLolT2HLOmHmaUqLZ/view?usp=drive_link`, '_blank');
   }
 
+  changeMyProfilePics = () => {
+    let imageNames = ['Ganesh.jpg', 'myProfile.jpeg', 'myProfile2.jpeg', 'myProfile4.jpeg', 'myProfile5.jpeg'];
+    let i = 0;
+    this.setInterValSubscription = setInterval(() => {
+      (document.getElementById('myProfilePicId') as any).src = 'assets/'+imageNames[i++];
+      if(i === imageNames.length) {
+        i = 0;
+      }
+    }, 4000);
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.setInterValSubscription);
+  }
+
 }
+
