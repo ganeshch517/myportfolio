@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   openResumeInNewTab() {
-    window.open(`https://drive.google.com/file/d/156ZjGwzUGd9WKAIeLolT2HLOmHmaUqLZ/view?usp=drive_link`, '_blank');
+    window.open(`https://drive.google.com/file/d/1Fgj_D5f99yKUoaxJNgF3dO5VEVj2zTU1/view?usp=sharing`, '_blank');
   }
 
   changeMyProfilePics = () => {
