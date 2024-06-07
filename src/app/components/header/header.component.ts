@@ -32,6 +32,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     document.getElementById('skillsId')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  public scorllToExperience() {
+    document.getElementById('experianceId')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+
   ngOnInit(): void {
     this.showCurrentDateTime();
   }

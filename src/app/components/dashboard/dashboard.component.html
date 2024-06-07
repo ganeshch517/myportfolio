@@ -6,26 +6,6 @@
     </div>
 </div>
 
-
-<h3 id="projectsTitleId">PORTFOLIO</h3>
-<div class="row initial-row" id="projectsDivId">
-
-    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet" *ngFor="let project of myProjects">
-        
-        <div class="card projectSection" [attr.data-aos]="project.fadeStyle">
-            <div id="imgBlock"><img [src]="project.bannerImageURL" class="card-img-top pfBannerImage" alt="..."></div>
-            <div class="card-body">
-              <h5 class="card-title pfTitle">{{project.title}}</h5>
-              <p class="card-text projDesc" [ngbTooltip]="project.description" placement="bottom">{{project.description}}</p>
-              <a class="btn btn-primary viewBtn" (click)="displayProjectDetails(project)">VIEW</a>
-              <div><span class="techSpan">Technologies Used:</span> {{project.technologiesUsed}}</div>
-            </div>
-        </div> 
-        
-    </div>
-
-</div>
-
 <!-- ABOUT SECTION -->
 <div class="about container aboutMeMainContainer" id="aboutMeId">
 
@@ -34,7 +14,7 @@
       <div class="row">
       
       <div class="col-lg-6 col-sm-12 col-md-12 imageSection">
-        <img class="profile-picture" id="myProfilePicId" src="assets/myProfile.jpeg" alt="Ganesh's image">
+        <img class="profile-picture" id="myProfilePicId" src="/assets/myProfile.jpeg" alt="Ganesh's image">
       </div>
 
       <div class="col-lg-6 col-sm-12 col-md-12">
@@ -67,7 +47,6 @@
 </div>
 
 </div>
-
 
 <!-- SKILLS SECTION -->
 <div class="skills container aboutMeMainContainer" id="skillsId">
@@ -103,6 +82,105 @@
 
   </div>
   </div>
+</div>
+
+<!-- Experience -->
+<div class="experience container experianceMainContainer" id="experianceId">
+  
+  <div class="container py-5" id="experianceContainerId">
+    <div class="card-title" id="experianceTitle">EXPERIENCE</div>
+    <div class="main-timeline-4 text-white">
+      <div class="timeline-4 left-4">
+        <div class="card gradient-custom">
+          <div class="card-body p-4">
+            <h2>Associate || Jan 2023 - Present</h2>
+            <h4 class="small text-white-50 mb-4"></h4>
+            <h4>Cognizant Technology Solutions, Hyderabad</h4>
+            <ul>
+              <li>Designed Interactive UI components using Angular framework following Figma/Sketch.</li>
+              <li>Designed several UI screens using Angular framework and have made them functional by connecting them with the backend services.</li>
+              <li>Used SCSS & tailwind css for styling pages/components.</li>
+              <li>Implemented rxjs operators for manipulating the API responses as per our requirement.</li>
+              <li>Involved in developing the tables using Syncfusion library</li>
+              <li>Worked on pdf export feature for exporting the tables in the application using the syncfusion library.</li>
+              <li>Worked withe the external libraries like Syncfusion, dayjs, lodash etc...</li>
+              <li>Followed Agile Methodologies and participated in Sprint Planning, Technical Grooming and evaluating the tasks and feature estimations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-4 right-4">
+        <div class="card gradient-custom-4">
+          <div class="card-body p-4">
+            <h2>Programmer Analyst || Jan 2021 - Jan 2022</h2>
+            <h4 class="small text-white-50 mb-4"></h4>
+            <h4>Cognizant Technology Solutions, Hyderabad</h4>
+            <ul>
+              <li>Interacting with the Team members in resolving the challenges that I come across while developing the application.</li>
+              <li>Involved in developing the tables using AG Grids.</li>
+              <li>Studied about the rxjs operators in Angular.</li>
+              <li>Learnt about the external libraries like lodash, ng-bootstrap etc...</li>
+              <li>Active participation in the Scrum calls and Grooming a feature.</li>
+              <li>Did Estimations for the tasks understanding it's complexity level.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-4 left-4">
+        <div class="card gradient-custom">
+          <div class="card-body p-4">
+            <h2>Programmer Analyst || Jan 2021 - Jan 2022</h2>
+            <h4 class="small text-white-50 mb-4"></h4>
+            <h4>Cognizant Technology Solutions, Hyderabad</h4>
+            <ul>
+              <li>Studied about the RESTful web services.</li>
+              <li>Learnt Java Programming language, Streams, etc...</li>
+              <li>Did a course on Spring Boot and Microservices.</li>
+              <li>Implemented the methods like POST, PUT, DELETE, GET in Spring Boot.</li>
+              <li>Testing the response of API's using POSTMAN client.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-4 right-4">
+        <div class="card gradient-custom-4">
+          <div class="card-body p-4">
+            <h2>Programmer Analyst Trainee || Jan 2020 - Jan 2022</h2>
+            <h4 class="small text-white-50 mb-4"></h4>
+            <h4>Cognizant Technology Solutions, Hyderabad</h4>
+            <ul>
+              <li>Learnt Web development markup and styling like HTML, CSS</li>
+              <li>Started implementing Javascript framework and its ES6 features.</li>
+              <li>Understood the waterfall model and its methodologies.</li>
+              <li>Learnt about the Visual Studio Code editor.</li>
+              <li>Involved in developing the simple web pages using HTML, CSS and functionality with Javascript.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Portfolio -->
+<h3 id="projectsTitleId">PORTFOLIO</h3>
+<div class="row initial-row" id="projectsDivId">
+
+    <div class="col-lg-4 col-md-6 col-sm-12 divOutlet" *ngFor="let project of myProjects">
+        
+        <div class="card projectSection" [attr.data-aos]="project.fadeStyle">
+            <div id="imgBlock"><img [src]="project.bannerImageURL" class="card-img-top pfBannerImage" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title pfTitle">{{project.title}}</h5>
+              <p class="card-text projDesc" [ngbTooltip]="project.description" placement="bottom">{{project.description}}</p>
+              <a class="btn btn-primary viewBtn" (click)="displayProjectDetails(project)">VIEW</a>
+              <div><span class="techSpan">Technologies Used:</span> {{project.technologiesUsed}}</div>
+            </div>
+        </div> 
+        
+    </div>
+
 </div>
 
 
@@ -146,8 +224,6 @@
 
   </div>
   </div>
-  </div>
-
-
+</div>
 
 </div>
