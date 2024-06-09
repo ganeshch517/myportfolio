@@ -7,6 +7,20 @@
     position: absolute;
 }
 
+@media only screen and (max-device-width: 601px) { 
+    #footer {
+        height: 300px !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-device-width: 1001px) { 
+    #footer {
+        height: 300px !important;
+        text-align: center;
+    }
+}
+
 .naukriIcon,.linkedinIcon:hover {
     cursor: pointer;
 }
@@ -30,3 +44,7 @@
     display: flex;
     justify-content: center;
 }
+
+// .address, .socialMediaIcons, .copyright {
+//     padding: 20px;
+// }

@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
+    //(document.body.style as any).zoom = "70%";
   }
 
   constructor(public spinnerService: SpinnerService) {}

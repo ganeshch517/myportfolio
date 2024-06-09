@@ -85,7 +85,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
   changeMyProfilePics = () => {
     let imageNames = ['Ganesh.jpg', 'myProfile.jpeg', 'myProfile2.jpeg', 'myProfile4.jpeg', 'myProfile5.jpeg'];
     let i = 0;
-    console.log(imageNames[i]);
     this.setInterValSubscription = setInterval(() => {
       (document.getElementById('myProfilePicId') as any).src = 'assets/'+imageNames[i++];
       if(i === imageNames.length) {

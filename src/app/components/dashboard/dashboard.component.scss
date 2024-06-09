@@ -10,6 +10,11 @@
     padding-left: 20px;
 }
 
+#projectsDivId {
+  max-width: 92vw;
+  margin: 0 auto;
+}
+
 .fullscreen-background {
     background-image: url('../../../assets/HomeBackgroundImage.jpg');    
     background-size: cover;
@@ -143,8 +148,10 @@ mat-form-field {
     box-shadow: 0 1px 29px -3px rgba(0, 0, 0, .64);
 }
 
-#experianceContainerId {
+@media only screen and (min-device-width: 601px) {   
+  #experianceContainerId {
     padding: 100px;
+  }
 }
 
 #skillsTitle, #experianceTitle{
