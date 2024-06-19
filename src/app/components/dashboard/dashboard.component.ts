@@ -90,7 +90,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       if(i === imageNames.length) {
         i = 0;
       }
-    }, 4000);
+    }, 10000);
   }
 
   ngOnDestroy(): void {
