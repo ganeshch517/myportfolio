@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   openResumeInNewTab() {
-    let _URL: string = `https://drive.google.com/file/d/1DiDgaWiyfiLfW-OKczPhy2vzEEVbpSzz/view?usp=sharing`;
+    let _URL: string = `https://drive.google.com/file/d/1iWFAT0WMPwu0g1A-G6qHtbESuNfrK3tQ/view?usp=sharing`;
     window.open(_URL, '_blank');
   }
 
